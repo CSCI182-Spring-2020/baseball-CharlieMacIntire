@@ -36,14 +36,14 @@ int main()
 	while (!inFile.eof() && importCount < MAX_PLAYER_COUNT) {
 		// Read in line
 		
-		inFile >> tempName >> hit >> walk >> out;// >> battingAvg;
+		inFile >> tempName >> hit >> walk >> out;
 
 		// Write to team's Structure here
 		team [importCount]._name = tempName;
 		team [importCount]._hit = hit;
 		team [importCount]._walk = walk;
 		team [importCount]._out = out;
-		//team [importCount]._battingAvg = battingAvg;
+		
 		
 		importCount++;
 	}
@@ -53,7 +53,7 @@ int main()
 
 	for (int i = 0; i < MAX_PLAYER_COUNT; i++)
 	{
-		std::cout << team[i]._name << " " << team[i]._hit << " " << team[i]._walk << " " << team[i]._out << " " << (float)team[i]._hit / (float)(team[i]._walk + hit) << endl; // << " " << //team[i]._battingAvg << endl;
+		std::cout << team[i]._name << " " << team[i]._hit << " " << team[i]._walk << " " << team[i]._out << " " << (float)team[i]._hit / (float)(team[i]._walk + hit) << endl; 
 	}
 
 }
